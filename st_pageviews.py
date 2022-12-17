@@ -9,7 +9,7 @@ st.set_page_config(
 	layout="wide"
 )
 
-path_admin1_wiki_links = "data/admin1_africa_en_fr_ar.parquet"
+path_admin1_wiki_links = "data/admin1_africa_en_fr_ar_de_es_it.parquet.parquet"
 
 dict_wikis = {
 	"en": "English Wikipedia",
