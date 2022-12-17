@@ -11,6 +11,13 @@ st.set_page_config(
 
 path_admin1_wiki_links = "data/admin1_africa_en_fr_ar.parquet"
 
+dict_wikis = {
+	"en": "English Wikipedia",
+	"fr": "French Wikipedia",
+	"ar": "Arabic Wikipedia",
+	"de": "German Wikipedia",
+	"es": "Spanish Wikipedia",
+	"it": "Italian Wikipedia"}
 
 
 @st.experimental_memo
@@ -61,8 +68,8 @@ with col_time_period:
 with col_lang:
 	sel_lang = st.selectbox(
 		"Select language",
-		options = ["en", "fr", "ar"],
-		format_func= lambda x: {"en": "English Wikipedia", "fr": "French Wikipedia", "ar": "Arabic Wikipedia"}[x],
+		options = ["en", "fr", "ar", "de", "es", "it"],
+		format_func= lambda x: dict_wikis[x],
 		index = 0
 	)
 	dict_lang = get_dict_lang_links(df_admin1, sel_lang)
