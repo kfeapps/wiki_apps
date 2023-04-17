@@ -55,7 +55,7 @@ def filter_by_lang(df_temp, lang):
 df_admin1 = load_admin1_wiki_links(path_admin1_wiki_links)
 country_list = get_sorted_country_list(df_admin1)
 
-st.header("Wikipedia Pageviews for ADMIN1-regions in Africa")
+st.header("Wikipedia Pageviews for ADMIN1-regions in Africa!")
 
 col_time_period, col_lang, col_admin0, col_admin1, col_freq, col_chart_option = st.columns(6)
 with col_time_period:
